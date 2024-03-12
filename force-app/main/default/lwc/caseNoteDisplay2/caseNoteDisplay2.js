@@ -43,9 +43,9 @@ handleSearch(event) {
     //         const fieldName = event.target.name; //what is the name of the field triggering this?
     //         if(fieldName === 'clientNameSearch') { } // If they are entering into our search text box, do something
                
-               console.log('Value to filter by: ' + event.target.value); // event.target.value = text entered into the textbox
-               console.log('Initial Records: ' + JSON.stringify(this.initialRecords));
-               console.log('Data: ' + JSON.stringify(this.data));
+               //console.log('Value to filter by: ' + event.target.value); // event.target.value = text entered into the textbox
+               //console.log('Initial Records: ' + JSON.stringify(this.initialRecords));
+               //console.log('Data: ' + JSON.stringify(this.data));
 
                //console.log('data' + data);
                //this.data = wireParam.data;
@@ -83,14 +83,14 @@ handleSearch(event) {
                }
            }
 onClick(event) {
-    console.log('export button clicked')
+    //console.log('export button clicked')
     this.downloadCSVFile();
 }
 
 downloadCSVFile() {   
 // this method validates the data and creates the csv file to download
 // this method from https://www.salesforcecodecrack.com/2019/05/export-data-as-csv-file-with-javascript.html
-    console.log('downloadCSV method activated')
+    //console.log('downloadCSV method activated')
     let rowEnd = '\n';
     let csvString = '';
     // this set elminates the duplicates if have any duplicate keys
