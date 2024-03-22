@@ -1,0 +1,13 @@
+<template>
+<p> Quick proof of concept: an LWC that pulls path data from the affiliated Contact and fills out a path component.</p>
+<p> Your user ID is {userId}</p>
+<p> Your affiliated contactId is {returnedContactId}</p>
+
+<p> Your contact's picklist value is: {contacts.data}. Here is your picklist:</p>
+
+<lightning-progress-indicator current-step={contacts.data} type="path" variant="base">
+    <lightning-progress-step label="First" value="First"></lightning-progress-step>
+    <lightning-progress-step label="Second" value="Second"></lightning-progress-step>
+    <lightning-progress-step label="Third" value="Third"></lightning-progress-step>
+</lightning-progress-indicator>
+</template>
