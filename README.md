@@ -1,18 +1,7 @@
-# Salesforce DX Project: Next Steps
+# LWC Projects
 
-Now that you’ve created a Salesforce DX project, what’s next? Here are some documentation resources to get you started.
+Here are just a few Lightning Web Components I've made in my time as a Solution Architect. They are rough proofs of concept, meant to be passed to a developer for refactoring, scalability, etc. If you're learning LWC as I am, you might be interested in these too. The full list of LWCs here are:
 
-## How Do You Plan to Deploy Your Changes?
-
-Do you want to deploy a set of changes, or create a self-contained application? Choose a [development model](https://developer.salesforce.com/tools/vscode/en/user-guide/development-models).
-
-## Configure Your Salesforce DX Project
-
-The `sfdx-project.json` file contains useful configuration information for your project. See [Salesforce DX Project Configuration](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_ws_config.htm) in the _Salesforce DX Developer Guide_ for details about this file.
-
-## Read All About It
-
-- [Salesforce Extensions Documentation](https://developer.salesforce.com/tools/vscode/)
-- [Salesforce CLI Setup Guide](https://developer.salesforce.com/docs/atlas.en-us.sfdx_setup.meta/sfdx_setup/sfdx_setup_intro.htm)
-- [Salesforce DX Developer Guide](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_intro.htm)
-- [Salesforce CLI Command Reference](https://developer.salesforce.com/docs/atlas.en-us.sfdx_cli_reference.meta/sfdx_cli_reference/cli_reference.htm)
+* Custom Case Note Viewer: LWC that allows users to filter Case Notes by Contact and export them
+* Experience Cloud Path: An LWC that takes the ContactId of an Experience Cloud user, accesses a picklist and displays it in the form of a Path for use in Experience Clouds
+* Printable View NPC: LWC that duplicates the "Printable View" functionality, not currently available on Nonprofit Cloud (NPC) objects
