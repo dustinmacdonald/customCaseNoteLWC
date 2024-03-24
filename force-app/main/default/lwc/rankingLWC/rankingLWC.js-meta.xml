@@ -10,7 +10,7 @@
     <targetConfigs>
         <targetConfig targets="lightning__RecordPage">
             <property name="objectValue" type="String" default="" label="Select Object"/>
-            <property name="picklistValue" type="String" default="" label="Select Field"/>
+            <property name="fieldValue" type="String" default="" label="Select Field"/>
         </targetConfig>
     </targetConfigs>
 </LightningComponentBundle>
