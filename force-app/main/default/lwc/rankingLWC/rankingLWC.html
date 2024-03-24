@@ -1,0 +1,40 @@
+<template>
+    <lightning-card>
+        <h3 slot="title">
+            <lightning-icon icon-name="utility:picklist_choice" size="small"></lightning-icon> Ranked Picklist
+        </h3>
+    <lightning-layout>
+        <lightning-layout-item size="12" padding="horizontal-small">
+            <lightning-card>
+                <table class="slds-table slds-table_cell-buffer slds-table_bordered" aria-labelledby="element-with-table-label other-element-with-table-label">
+                    <thead>
+                        <tr>
+                            <th scope="col" width="20px">
+                                Rank
+                            </th>
+                            <th scope="col">
+                                Name
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <template for:each={dataArray} for:item="data">
+                            <tr key={data.seqNumber}>
+                                <td>
+                                    <div draggable="true" ondragstart={handleDragStart} ondrop={handleDrop} ondragover={handleDragover}
+                                        data-item={data.seqNumber}>
+                                        {data.seqNumber}
+                                    </div>
+                                </td>
+                                <td>
+                                    {data.name}
+                                </td>
+                            </tr>
+                        </template>
+                    </tbody>
+                </table>
+            </lightning-card>
+        </lightning-layout-item>
+    </lightning-layout>
+    </lightning-card>
+</template>
