@@ -1,0 +1,18 @@
+<template>
+    <lightning-card>
+        <h3 slot="title">
+            <lightning-icon icon-name="utility:file" size="small"></lightning-icon> Release Notes
+        </h3>
+                <div class="slds-m-around_medium">
+                        <div style="height: 300px;">
+                            <lightning-datatable
+                                    key-field="id"
+                                    data={accountList}
+                                    columns={columns}>
+                            </lightning-datatable>
+                        </div>
+            </div>
+            </p>
+
+    </lightning-card>
+</template>

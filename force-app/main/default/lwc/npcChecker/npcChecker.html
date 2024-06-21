@@ -1,0 +1,34 @@
+<template>
+    <lightning-card>
+        <div class="slds-var-m-around_medium">
+            <lightning-icon icon-name="standard:calibration" size="large"></lightning-icon> NPC Installation Checker
+        </div>
+        <div class="slds-var-m-around_medium">
+<lightning-button label="Check if NPC is Installed" title="Check if NPC is Installed" onclick={handleClick} class="slds-var-m-left_x-small"></lightning-button>
+</div>
+</lightning-card>
+<lightning-card>
+    <div class="slds-var-m-around_medium">
+        Results:
+    </div>
+<template lwc:if={accountFound}>
+    <div class="slds-var-m-around_medium">
+<lightning-icon icon-name="utility:success" size="small"></lightning-icon> Account object
+</div>
+</template>
+
+<template lwc:if={permissionSetFound}>
+<lightning-icon icon-name="utility:success" size="small"></lightning-icon>
+<div class="slds-var-m-around_medium">
+My Permission Set
+</div>
+</template>
+
+<template lwc:if={permissionSetNotFound}>
+    <div class="slds-var-m-around_medium">
+    <lightning-icon icon-name="utility:error" size="small"></lightning-icon> My Permission Set
+    </div>
+</template>
+
+</lightning-card>
+</template>

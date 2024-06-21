@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>60.0</apiVersion>
+    <environments>Default</environments>
+    <interviewLabel>My Assessment Screen Flow {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>My Assessment Screen Flow</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>Flow</processType>
+    <recordCreates>
+        <name>Create_NCCM_Assessment</name>
+        <label>Create NCCM Assessment</label>
+        <locationX>176</locationX>
+        <locationY>242</locationY>
+        <inputAssignments>
+            <field>caseman__AssessmentCompletedDate__c</field>
+            <value>
+                <elementReference>Choose_Date</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>caseman__Client__c</field>
+            <value>
+                <stringValue>0037e00001uft3XAAQ</stringValue>
+            </value>
+        </inputAssignments>
+        <object>caseman__Assessment__c</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordCreates>
+    <screens>
+        <name>Assessment</name>
+        <label>Assessment</label>
+        <locationX>176</locationX>
+        <locationY>134</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>true</allowPause>
+        <connector>
+            <targetReference>Create_NCCM_Assessment</targetReference>
+        </connector>
+        <fields>
+            <name>Choose_Date</name>
+            <dataType>Date</dataType>
+            <fieldText>Choose Date</fieldText>
+            <fieldType>InputField</fieldType>
+            <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+            <isRequired>false</isRequired>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <start>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Assessment</targetReference>
+        </connector>
+    </start>
+    <status>Draft</status>
+</Flow>

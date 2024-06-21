@@ -1,0 +1,14 @@
+<template>
+    <lightning-card>
+        <h3 slot="title">
+            <lightning-icon icon-name="custom:custom43" size="small"></lightning-icon> Create Outreach
+        </h3>
+            <p class="slds-var-p-horizontal_small"></p>
+            <!-- Current Record {recordId}</p> --> 
+            <template lwc:if={outreachId}> <!-- Not visible until the record is created -->
+                <p class="slds-var-p-horizontal_small"> Your newly created outreach is: {outreachId}</p>
+                <p class="slds-var-p-horizontal_small">
+                <lightning-button label="Go to Outreach" title="Go to Outreach" onclick={handleClick} class="slds-var-m-left_x-small"></lightning-button></p>
+            </template>
+    </lightning-card>
+</template>
